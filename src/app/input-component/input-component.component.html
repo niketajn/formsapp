@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-6">
+        <input (keyup)="onKey($event)">
+        
+        <button (click)="displayDropdown()">Options</button>
+        
+        <select *ngIf="btnClicked" (change)="changeDropdown($event)">
+            <option>--select options--</option>
+            <option *ngFor="let dropdown of dropdownList">
+                {{dropdown}}
+            </option>
+        </select>
+
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6">
+        <app-display-component [value]="value" [dropdownValue]="dropdownValue"></app-display-component>
+    </div>
+</div>
+
