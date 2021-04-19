@@ -11,9 +11,17 @@ export class DisplayComponentComponent implements OnInit {
   @Input() dropdownValue:string='';
   enableText:boolean=false;
   multipleChoice:boolean=false;
+  @Input() addMultiOption:string = '';
+  multipleChoiceOptArray:string[]=['option1'];
   constructor() { }
 
   ngOnInit(): void {
+  }
+  child(){
+    //alert("child component");
+    console.log(this.addMultiOption);
+    this.multipleChoiceOptArray.push(this.addMultiOption);
+    console.log(this.multipleChoiceOptArray);
   }
 
   ngOnChanges() {
