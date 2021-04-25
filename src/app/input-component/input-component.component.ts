@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild, AfterViewInit } from '@angular/core';
-import {DisplayComponentComponent} from '../display-component/display-component.component';
+import { Question } from '../display-component/display-component.component';
 
 @Component({
   selector: 'app-input-component',
@@ -54,5 +54,8 @@ export class InputComponentComponent implements OnInit,AfterViewInit {
     }, 50);
     
     //this.displayComponent.ngOnInit();
+   }
+   addQuestion(){
+
    }
 }

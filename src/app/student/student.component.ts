@@ -17,7 +17,7 @@ interface Student {
 
 
 export class StudentComponent implements OnInit {
-
+  bgBlueColor = false;
   constructor() { }
 
   ngOnInit(): void {

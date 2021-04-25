@@ -1,4 +1,4 @@
-<!--<div class="row">
+<div class="row">
     <div class="col-md-6 col-lg-6 col-sm-6">
         <input (keyup)="onKey($event)">
         
@@ -14,12 +14,16 @@
         <input type="text" *ngIf="multipleChoiceOption"
          #addMultiOpt (keyup.enter)="onEnter(addMultiOpt.value)"/>
         <p>{{addMultiOption}}</p>
+
+        <button (click)="addQuestion()">Add Question</button>
+       
     </div>
     <div class="col-md-6 col-lg-6 col-sm-6">
-        <app-display-component [value]="value" 
+        <app-display-component></app-display-component>
+       <!-- <app-display-component [value]="value" 
         [dropdownValue]="dropdownValue" [addMultiOption]="addMultiOption">
-        </app-display-component>
+        </app-display-component>-->
 
     </div>
-</div>-->
+</div>
 

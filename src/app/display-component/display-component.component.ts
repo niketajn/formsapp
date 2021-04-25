@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import questionList from '../formSample1.json';
+//import questionList from '../formSample1.json';
 
 
-interface Question{
+export interface Question{
   type:string;
   questionText:string;
   choices:string[];
@@ -24,5 +24,10 @@ export class DisplayComponentComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  questions: Question[] = questionList;  
+
+  /*addQues(){
+      questions.push(question)
+  }*/
+
+  questions: Question[] = [];  
 }
