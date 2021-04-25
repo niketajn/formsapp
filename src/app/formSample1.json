@@ -1,0 +1,19 @@
+[
+    {
+      "type": "shorttext",
+      "questionText": "what is your name?",
+      "choices": []
+    },
+    {
+      "type": "mc",
+      "questionText": "what is your fav color?",
+      "choices": [
+        "blue","red","green"
+      ]
+    },
+    {
+      "type": "longtext",
+      "questionText":"what is your childhood dream?",
+      "choices": []
+    }
+  ]

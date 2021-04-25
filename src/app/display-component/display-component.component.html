@@ -1,5 +1,34 @@
-    <p>{{value}}</p>
-    <input type="text" value="type something" *ngIf="enableText"/>
+  
+    <div *ngFor="let question of questions" [ngSwitch]="question.type">
+        <div *ngSwitchCase="'shorttext'">
+          <p>{{ question.questionText }}</p>
+          <input type="text" value="type something"/>
+        </div>
+
+
+        <div *ngSwitchCase="'longtext'">
+          <p>{{ question.questionText }}</p>
+          <textarea type="text"></textarea>
+        </div>
+
+        <div *ngSwitchCase="'mc'">
+          <p>{{ question.questionText }}</p>
+          <select>
+            <option *ngFor="let choice of question.choices" 
+            value="{{choice}}">
+            {{choice}}
+            
+          </option>
+
+          </select>
+        </div>
+
+    </div>
+    
+    
+    
+    
+   <!-- <input type="text" value="type something" *ngIf="enableText"/>
     <ng-container *ngIf="multipleChoice">
       <div *ngFor="let multipleCheckbox of multipleChoiceOptArray;let i=index;" class="checkbox">
         <label>
@@ -7,4 +36,4 @@
             {{ multipleCheckbox }}
         </label>
       </div>
-    </ng-container>
+    </ng-container>-->

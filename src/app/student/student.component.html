@@ -1,0 +1,31 @@
+<div class="container">  
+    
+    <h1> Display Data from Json File in Angular 9 </h1>  
+      
+    <table class="table table-striped">  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>Name</th>  
+            <th>Email</th>  
+            <th>Gender</th>  
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let student of students">  
+          <td>{{ student.id }}</td>  
+          <td ><em *ngIf="student.gender === 'male'">{{ student.name }}</em>
+        
+          <b *ngIf="student.gender === 'female'">{{ student.name }}</b>
+            
+        </td>
+          <td>{{ student.email }}</td>  
+          <td [ngStyle]="{'background-color':student.gender === 'male' ? 'red' : 'green' }">
+            {{ student.gender}}    
+        </td>  
+  
+
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  

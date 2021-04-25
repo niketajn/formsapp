@@ -13,7 +13,7 @@ export class InputComponentComponent implements OnInit,AfterViewInit {
   dropdownValue:string='';
   multipleChoiceOption:boolean=false;
 
-  @ViewChild(DisplayComponentComponent) dc : DisplayComponentComponent;
+  //@ViewChild(DisplayComponentComponent) dc : DisplayComponentComponent;
 
   constructor() { 
   }
@@ -50,7 +50,7 @@ export class InputComponentComponent implements OnInit,AfterViewInit {
     console.log(this.addMultiOption);
     let _this = this;
     setTimeout(function(){
-      _this.dc.child();  
+   //   _this.dc.child();  
     }, 50);
     
     //this.displayComponent.ngOnInit();
