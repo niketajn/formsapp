@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import questionList from '../formSample1.json';
 
-
 export interface Question{
   type:string;
   questionText:string;
@@ -14,8 +13,6 @@ export interface Question{
   styleUrls: ['./display-component.component.css']
 })
 
-
-
 export class DisplayComponentComponent implements OnInit {
 
   constructor() { 
@@ -25,9 +22,9 @@ export class DisplayComponentComponent implements OnInit {
     
   }
 
-  /*addQues(){
-      questions.push(question)
-  }*/
+  addQues(question:Question){
+      this.questions.push(question)
+  }
 
   questions: Question[] = [];  
 }

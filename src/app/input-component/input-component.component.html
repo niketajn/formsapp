@@ -11,13 +11,17 @@
             </option>
         </select>
 
-        <input type="text" *ngIf="multipleChoiceOption"
-         #addMultiOpt (keyup.enter)="onEnter(addMultiOpt.value)"/>
-        <p>{{addMultiOption}}</p>
-
+        <!--<input type="text" value="choice1" *ngIf="isMultipleChoiceOption"
+         #addMultiOpt (keyup.enter)="onEnter(addMultiOpt.value)"/>-->
+         <div *ngIf="isMultipleChoiceOption">
+            <div *ngFor="let mcTextChoice of mcTextInputArray">
+                <input type="text" value={{mcTextChoice}} #textChoice />
+            </div>
+            <button (click)="addTextInput()">ADD[+]</button>
+        </div>
         <button (click)="addQuestion()">Add Question</button>
-       
     </div>
+
     <div class="col-md-6 col-lg-6 col-sm-6">
         <app-display-component></app-display-component>
        <!-- <app-display-component [value]="value" 
@@ -25,5 +29,6 @@
         </app-display-component>-->
 
     </div>
+
 </div>
 
